@@ -1,0 +1,35 @@
+releases:
+v3.0.0-alpha.2
+✔ Feature: phpDocs описать @done (18-11-20 12:35)
+✔ Feature: Scalar Type Hints @done (18-11-20 12:33)
+✔ Feature: add declare(strict_types=1); string @done (18-11-20 12:33)
+✔ Feature: change library structure to standart @done (18-11-20 12:33)
+
+v3.0.0-alpha.1
+ ✔ BugFix: удалена v в версии composer.json @done (18-11-19 09:07)
+
+v3.0.0-alpha
+
+v2.0.3 close #4, close #5
+ ✔ Bugfix: #5: Add types of attributes of methods and return type * @done (18-11-08 08:59)
+ ✔ Bugfix: #4: Remove t in russian attribute words * @done (18-11-08 08:59)
+
+v2.0.2 phpDoc applied
+
+v2.0.1 Bugfix in BemTest.php
+
+v2.0.0 Major Version change
+ ✔ Major Version change (With Crud & Base)@done (18-03-08 15:35)
+ ✔ Added jquery selectors style support (ids, classes, attributes) @done (18-03-08 15:36)
+ ✔ Added BemTest.php for UTest @done (18-03-08 15:39)
+ ✔ 100% code covering by UTests @done (18-03-08 15:39)
+
+v1.0.0 Just major Version change
+
+v0.4.0 Refactoring
+ ✔ Renaming bem.todo -> versions.todo @done (17-05-14 21:04)
+ ✔ bem.todo Changed @done (17-05-03 08:39)
+
+v0.3.0
+  ✔ API Change: Pattern - h1 instead of theH1 and getH1 methods. @done (17-05-02 23:40)
+  ✔ BugFix: Attributes not added to tags. @done (17-05-02 23:27)
