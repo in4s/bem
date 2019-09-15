@@ -1,5 +1,5 @@
 {
-    "name": "j4s/bem",
+    "name": "in4s/bem",
     "description": "Bem Class",
     "type": "library",
     "version": "3.0.0-alpha.2",
@@ -7,7 +7,7 @@
         "bem",
         "html"
     ],
-    "homepage": "https://bitbucket.org/j4s/bem",
+    "homepage": "https://github.com/in4s/bem/",
     "license": "proprietary",
     "authors": [
         {
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-          "j4s\\": ["src/", "tests/"]
+          "in4s\\": ["src/", "tests/"]
         },
         "files": []
     }

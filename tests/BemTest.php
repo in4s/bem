@@ -1,21 +1,21 @@
 <?php
-/** j4s/bem */
+/** in4s/bem */
 
-namespace j4s;
+namespace in4s;
 
 /**
  * Class BemTest - Тесты для класса Bem
  *
- * @package     j4s\Bem
+ * @package     in4s\Bem
  * @author      Eugeniy Makarkin <solascriptura@mail.ru>
- * @version     v1.0.2 2018-10-16 08:41:22
+ * @version     v2.0.0 2019-09-15 08:06:20
  * @copyright   Copyright (c) 2018, by J4. Proprietary License. It is NOT Open Source!
  */
 class BemTest
 {
     /**
      * run() - запускает тесты данного класса
-     * @version v1.0.1 2018-10-16 08:44:45
+     * @version v2.0.0 2019-09-15 08:08:35
      * @return Null
      */
     public static function run()
@@ -32,7 +32,7 @@ class BemTest
 
     /**
      * linkTest() - тест для метода link
-     * @version v1.0.1 2018-10-16 08:46:48
+     * @version v2.0.0 2019-09-15 08:08:35
      * @return string - html тег с сообщением результата прохождения теста
      */
     public static function linkTest()
@@ -65,7 +65,7 @@ class BemTest
 
     /**
      * hiddenTest() - тест для метода hidden
-     * @version v1.0.1 2018-10-16 08:48:43
+     * @version v2.0.0 2019-09-15 08:08:35
      * @return string - html тег с сообщением результата прохождения теста
      */
     public static function hiddenTest()
@@ -98,7 +98,7 @@ class BemTest
 
     /**
      * selectTest() - тест для метода select
-     * @version v1.0.1 2018-10-16 08:49:23
+     * @version v2.0.0 2019-09-15 08:08:35
      * @return string - html тег с сообщением результата прохождения теста
      */
     public static function selectTest()
@@ -148,7 +148,7 @@ class BemTest
 
     /**
      * tagTest() - тест для метода tag
-     * @version v1.0.1 2018-10-16 08:49:40
+     * @version v2.0.0 2019-09-15 08:08:35
      * @return string - html тег с сообщением результата прохождения теста
      */
     public static function tagTest()
@@ -203,7 +203,7 @@ class BemTest
 
     /**
      * closeTagTest() - тест для метода closeTag
-     * @version v1.0.1 2018-10-16 08:50:01
+     * @version v2.0.0 2019-09-15 08:08:35
      * @return string - html тег с сообщением результата прохождения теста
      */
     public static function closeTagTest()

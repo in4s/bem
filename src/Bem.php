@@ -1,16 +1,16 @@
 <?php
-/** j4s/bem */
+/** in4s/bem */
 
 declare(strict_types=1);
 
-namespace j4s;
+namespace in4s;
 
 /**
  * Class Bem - класс для создания html тегов, формируемых в соответствии с БЭМ методологией
  *
- * @package     j4s\Bem
+ * @package     in4s\Bem
  * @author      Eugeniy Makarkin <solascriptura@mail.ru>
- * @version     v2.0.3 2018-11-20 11:49:03
+ * @version     v3.0.0 2019-09-15 08:10:14
  * @copyright   Copyright (c) 2018, by J4. Proprietary License. It is NOT Open Source!
  */
 class Bem
@@ -18,7 +18,7 @@ class Bem
 
     /**
      * Возвращает html тег <a>, с заданными аттрибутами, заданной ссылкой и заданным содержимым
-     * @version v1.0.2 2018-11-20 11:48:48
+     * @version v2.0.0 2019-09-15 08:11:18
      * @param string $selector - Селектор
      * @param string $href - Ссылка
      * @param string $content - Содержимое тега
@@ -31,7 +31,7 @@ class Bem
 
     /**
      * Возвращает html тег <input type="hidden" ...>, с заданными аттрибутами, заданным именем и заданным значением
-     * @version v1.0.2 2018-11-20 11:48:54
+     * @version v2.0.0 2019-09-15 08:11:18
      * @param string $selector - Селектор
      * @param string $name - Имя (значение аттрибута name)
      * @param string $value - Значение (Содержимое аттрибута value)
@@ -44,7 +44,7 @@ class Bem
 
     /**
      * Возвращает html тег <select>, с заданными аттрибутами, заданным именем, заданными options, с выбраным option, соответствующим заданному значению
-     * @version v1.0.2 2018-11-20 11:48:29
+     * @version v2.0.0 2019-09-15 08:11:18
      * @param string $selector - Селектор
      * @param string $name - Имя (значение аттрибута name)
      * @param array $options - Массив параметров для тегов options
@@ -62,7 +62,7 @@ class Bem
 
     /**
      * Возвращает html тег, с заданными аттрибутами и заданным содержимым
-     * @version v1.0.2 2018-11-20 11:48:18
+     * @version v2.0.0 2019-09-15 08:11:18
      * @param string $selector - Селектор
      * @param string|null $content -  Содержимое тега
      * @return string - Возвращаемый тег
@@ -135,7 +135,7 @@ class Bem
 
     /**
      * Возвращает закрывающий html тег
-     * @version v1.0.2 2018-11-20 11:47:57
+     * @version v2.0.0 2019-09-15 08:11:18
      * @param string $tagName - Имя тега
      * @return string - Возвращаемый код закрывающего тега
      */
