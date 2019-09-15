@@ -1,4 +1,7 @@
 releases:
+v3.0.0-alpha.3
+ ✔ Repository moved to github
+
 v3.0.0-alpha.2
 ✔ Feature: phpDocs описать @done (18-11-20 12:35)
 ✔ Feature: Scalar Type Hints @done (18-11-20 12:33)
