@@ -10,8 +10,8 @@ namespace in4s;
  *
  * @package     in4s\Bem
  * @author      Eugeniy Makarkin <solascriptura@mail.ru>
- * @version     v3.0.0 2019-09-15 08:10:14
- * @copyright   Copyright (c) 2018, by J4. Proprietary License. It is NOT Open Source!
+ * @version     v3.0.3 2020-07-07 11:18:24
+ * @copyright   Copyright (c) 2008 - 2020, by J4. Proprietary License. It is NOT Open Source!
  */
 class Bem
 {
@@ -31,15 +31,15 @@ class Bem
 
     /**
      * Возвращает html тег <input type="hidden" ...>, с заданными аттрибутами, заданным именем и заданным значением
-     * @version v2.0.0 2019-09-15 08:11:18
+     * @version v2.0.3 2020-07-07 11:18:12
      * @param string $selector - Селектор
      * @param string $name - Имя (значение аттрибута name)
      * @param string $value - Значение (Содержимое аттрибута value)
-     * @return string - Возвращаемый тег
+     * @return string - Возвращаемый html тег
      */
     public function hidden(string $selector, string $name, string $value = '') : string
     {
-        return $this->tag('input' . $selector . '[type=hidden][name=' . $name . '][value=' . $value . ']', null);
+        return $this->tag("input{$selector}[type=hidden][name={$name}][value={$value}]", null);
     }
 
     /**
