@@ -12,16 +12,19 @@
     "authors": [
         {
             "name": "Evgeniy Makarkin",
-            "email": "soloscriptura@mail.ru",
+            "email": "solascriptura@mail.ru",
             "role": "lead"
         }
     ],
     "require": {
-        "php": ">=7.0.0"
+        "php": ">=7.4.0"
     },
     "autoload": {
         "psr-4": {
-          "in4s\\": ["src/", "tests/"]
+            "in4s\\": [
+                "src/",
+                "tests/"
+            ]
         },
         "files": []
     }
