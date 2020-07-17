@@ -1,15 +1,17 @@
 <?php
 /** in4s/bem */
 
+declare(strict_types=1);
+
 namespace in4s;
 
 /**
  * Class BemTest - Тесты для класса Bem
  *
- * @version     v3.0.0 2020-07-07 18:00:57
+ * @version     v4.0.0 2020-07-15 22:06:59
  * @author      Eugeniy Makarkin <solascriptura@mail.ru>
  * @package     in4s\Bem
- * @copyright   Copyright (c) 2018, by J4. Proprietary License. It is NOT Open Source!
+ * @copyright   Copyright (c) 2008-2020, by J4. Proprietary License. It is NOT Open Source!
  */
 class BemTest
 {
@@ -17,9 +19,9 @@ class BemTest
      * run() - запускает тесты данного класса
      *
      * @version v3.0.0 2020-07-07 18:01:09
-     * @return Null
+     * @return void
      */
-    public static function run()
+    public static function run(): void
     {
         echo '<div class="utest__section">';
         echo '<h5>Bem:</h5>';
@@ -37,7 +39,7 @@ class BemTest
      * @version v3.0.0 2020-07-07 18:01:21
      * @return string - html тег с сообщением результата прохождения теста
      */
-    public static function linkTest()
+    public static function linkTest(): string
     {
         global $Bem, $UTest;
 
@@ -71,7 +73,7 @@ class BemTest
      * @version v3.0.0 2020-07-07 18:02:12
      * @return string - html тег с сообщением результата прохождения теста
      */
-    public static function hiddenTest()
+    public static function hiddenTest(): string
     {
         global $Bem, $UTest;
 
@@ -105,7 +107,7 @@ class BemTest
      * @version v3.0.0 2020-07-07 18:02:12
      * @return string - html тег с сообщением результата прохождения теста
      */
-    public static function selectTest()
+    public static function selectTest(): string
     {
         global $Bem, $UTest;
 
@@ -142,7 +144,7 @@ class BemTest
         $expect .= '<option value="3" selected>option3</option>';
         $expect .= '</select>';
         // Act
-        $act = $Bem->select('#hi.there', 'myname', $optionsArray, 3);
+        $act = $Bem->select('#hi.there', 'myname', $optionsArray, '3');
         // Assert Test
         $UTest->isEqual("select('#hi.there', 'myname', array, 3);", $expect, $act);
 
@@ -156,7 +158,7 @@ class BemTest
      * @version v3.0.0 2020-07-07 18:02:12
      * @return string - html тег с сообщением результата прохождения теста
      */
-    public static function tagTest()
+    public static function tagTest(): string
     {
         global $Bem, $UTest;
 
@@ -212,7 +214,7 @@ class BemTest
      * @version v3.0.0 2020-07-07 18:02:12
      * @return string - html тег с сообщением результата прохождения теста
      */
-    public static function closeTagTest()
+    public static function closeTagTest(): string
     {
         global $Bem, $UTest;
 
