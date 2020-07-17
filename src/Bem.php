@@ -8,7 +8,7 @@ namespace in4s;
 /**
  * Class Bem - класс для создания html тегов, формируемых в соответствии с БЭМ методологией
  *
- * @version     v4.0.0 2020-07-07 18:03:05
+ * @version     v5.0.0 2020-07-15 20:45:00
  * @author      Eugeniy Makarkin <solascriptura@mail.ru>
  * @package     in4s\Bem
  * @copyright   Copyright (c) 2008 - 2020, by J4. Proprietary License. It is NOT Open Source!
@@ -35,14 +35,14 @@ class Bem
     /**
      * Возвращает html тег, с заданными аттрибутами и заданным содержимым
      *
-     * @version v3.0.0 2020-07-07 18:03:27
+     * @version v4.0.0 2020-07-15 20:43:24
      *
      * @param string      $selector - Селектор
      * @param string|null $content  -  Содержимое тега
      *
      * @return string - Возвращаемый тег
      */
-    public function tag(string $selector = '', $content = ''): string
+    public function tag(string $selector = '', ?string $content = ''): string
     {
         $selectors = explode("[", $selector);
         $selector0 = $selectors[0];
@@ -127,16 +127,16 @@ class Bem
     /**
      * Возвращает html тег <select>, с заданными аттрибутами, заданным именем, заданными options, с выбраным option, соответствующим заданному значению
      *
-     * @version v3.0.0 2020-07-07 18:03:27
+     * @version v4.0.0 2020-07-15 20:44:48
      *
      * @param string      $selector - Селектор
      * @param string      $name     - Имя (значение аттрибута name)
      * @param array       $options  - Массив параметров для тегов options
-     * @param string|null $selected - id выбранного элемента
+     * @param string|null $selected - id выбранного элемента (выбранного option)
      *
      * @return string - Возвращаемый тег
      */
-    public function select(string $selector, string $name, array $options, $selected = null): string
+    public function select(string $selector, string $name, array $options, ?string $selected = null): string
     {
         $optionsHtml = $this->tag('option[value=null]', '--выберите--');
         foreach ($options as $option) {
