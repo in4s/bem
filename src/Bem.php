@@ -6,26 +6,25 @@ declare(strict_types=1);
 namespace in4s;
 
 /**
- * Class Bem - класс для создания html тегов, формируемых в соответствии с БЭМ методологией
+ * Generation of HTML tags, with classes according to BEM
  *
- * @version     v5.0.0 2020-07-15 20:45:00
- * @author      Eugeniy Makarkin <solascriptura@mail.ru>
+ * @version     v5.0.1 2020-09-09 16:12:56
+ * @author      Eugeniy Makarkin
  * @package     in4s\Bem
- * @copyright   Copyright (c) 2008 - 2020, by J4. Proprietary License. It is NOT Open Source!
  */
 class Bem
 {
 
     /**
-     * Возвращает html тег <a>, с заданными аттрибутами, заданной ссылкой и заданным содержимым
+     * Generate html tag <a>
      *
-     * @version v3.0.0 2020-07-07 18:03:27
+     * @version v3.0.1 2020-09-09 16:13:01
      *
-     * @param string $selector - Селектор
-     * @param string $href     - Ссылка
-     * @param string $content  - Содержимое тега
+     * @param string $selector - Selector
+     * @param string $href     - Link
+     * @param string $content  - Tag content
      *
-     * @return string - Возвращаемый тег
+     * @return string - Tag
      */
     public function link(string $selector, string $href, string $content): string
     {
@@ -33,14 +32,14 @@ class Bem
     }
 
     /**
-     * Возвращает html тег, с заданными аттрибутами и заданным содержимым
+     * Generate html tag
      *
-     * @version v4.0.0 2020-07-15 20:43:24
+     * @version v4.0.1 2020-07-15 20:43:24
      *
-     * @param string      $selector - Селектор
-     * @param string|null $content  -  Содержимое тега
+     * @param string      $selector - Selector
+     * @param string|null $content  - Tag content
      *
-     * @return string - Возвращаемый тег
+     * @return string - Tag
      */
     public function tag(string $selector = '', ?string $content = ''): string
     {
@@ -52,13 +51,13 @@ class Bem
 
         $atributes = [];
 
-        // Подготавливаем аттрибут id, если имеется
+        // Preparing id attribute, if exist
         preg_match_all("/(#([a-zA-Z0-9-_]*))/", $selector0, $ids);
         if (count($ids[2])) {
             array_push($atributes, 'id="' . $ids[2][0] . '"');
         }
 
-        // Подготавливаем аттрибут class, если имеется
+        // Preparing class attribute, if exist
         preg_match_all("/(\.([a-zA-Z0-9-_]*))/", $selector0, $classes0);
         if (count($classes0[2])) {
             $classes1 = $classes0[2];
@@ -66,7 +65,7 @@ class Bem
 
             foreach ($classes1 as $class1) {
 
-                // Добавляем главный класс для модификатора
+                // Add main class of modifier
                 $noModificator = preg_replace("/^(.*[^_])_([^_]*)$/", "$1", $class1);
                 if ($noModificator != $class1) {
                     $classes[] = $noModificator;
@@ -75,15 +74,15 @@ class Bem
                 $classes[] = $class1;
             }
 
-            // Исключаем повторяющиеся классы
+            // Exclude not unique classes
             $classes = array_unique($classes);
 
-            // Формируем значение аттрибута class
+            // Prepare the value of the class attribute
             $class = implode(" ", $classes);
             array_push($atributes, 'class="' . $class . '"');
         }
 
-        // Подготавливаем остальные аттрибуты
+        // Preparing the rest of the attributes
         preg_match_all("/(\[([^]]*)\])/", $selector, $atributes0);
         if (count($atributes0[2])) {
             $atributes1 = $atributes0[2];
@@ -97,10 +96,10 @@ class Bem
             }
         }
 
-        // Добавляем все подготовленные аттрибуты
+        // Add all prepared attributes
         $atributes = count($atributes) ? ' ' . implode(" ", $atributes) : '';
 
-        // Возвращаем результат
+        // Return results
         if (is_null($content)) {
             return '<' . $element . $atributes . '>';
         } else {
@@ -109,15 +108,15 @@ class Bem
     }
 
     /**
-     * Возвращает html тег <input type="hidden" ...>, с заданными аттрибутами, заданным именем и заданным значением
+     * Generate html tag <input type="hidden" ...>
      *
-     * @version v2.0.3 2020-07-07 11:18:12
+     * @version v2.0.4 2020-07-07 11:18:12
      *
-     * @param string $selector - Селектор
-     * @param string $name     - Имя (значение аттрибута name)
-     * @param string $value    - Значение (Содержимое аттрибута value)
+     * @param string $selector - Selector
+     * @param string $name     - Name (The value of the Name attribute)
+     * @param string $value    - Value (The content of the Value attribute)
      *
-     * @return string - Возвращаемый html тег
+     * @return string - Tag
      */
     public function hidden(string $selector, string $name, string $value = ''): string
     {
@@ -125,20 +124,20 @@ class Bem
     }
 
     /**
-     * Возвращает html тег <select>, с заданными аттрибутами, заданным именем, заданными options, с выбраным option, соответствующим заданному значению
+     * Generate html tag <select>
      *
-     * @version v4.0.0 2020-07-15 20:44:48
+     * @version v4.0.1 2020-07-15 20:44:48
      *
-     * @param string      $selector - Селектор
-     * @param string      $name     - Имя (значение аттрибута name)
-     * @param array       $options  - Массив параметров для тегов options
-     * @param string|null $selected - id выбранного элемента (выбранного option)
+     * @param string      $selector - Selector
+     * @param string      $name     - Name (The value of the Name attribute)
+     * @param array       $options  - Array of parameters for options tags
+     * @param string|null $selected - Id of the selected element
      *
-     * @return string - Возвращаемый тег
+     * @return string - Tag
      */
     public function select(string $selector, string $name, array $options, ?string $selected = null): string
     {
-        $optionsHtml = $this->tag('option[value=null]', '--выберите--');
+        $optionsHtml = $this->tag('option[value=null]', '--choose--');
         foreach ($options as $option) {
             $optionsHtml .= $this->tag('option[value=' . $option['id'] . ']' . ($option['id'] == $selected ? '[selected]' : ''), $option['name']);
         }
@@ -146,13 +145,13 @@ class Bem
     }
 
     /**
-     * Возвращает закрывающий html тег
+     * Generate the closing html tag
      *
-     * @version v3.0.0 2020-07-07 18:03:27
+     * @version v3.0.1 2020-09-09 16:13:01
      *
-     * @param string $tagName - Имя тега
+     * @param string $tagName - Tag name
      *
-     * @return string - Возвращаемый код закрывающего тега
+     * @return string - Closing tag
      */
     public function closeTag(string $tagName = 'div'): string
     {

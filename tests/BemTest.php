@@ -6,19 +6,18 @@ declare(strict_types=1);
 namespace in4s;
 
 /**
- * Class BemTest - Тесты для класса Bem
+ * Class BemTest - Tests for class Bem
  *
- * @version     v4.0.0 2020-07-15 22:06:59
- * @author      Eugeniy Makarkin <solascriptura@mail.ru>
+ * @version     v4.0.1 2020-09-09 16:14:07
+ * @author      Eugeniy Makarkin
  * @package     in4s\Bem
- * @copyright   Copyright (c) 2008-2020, by J4. Proprietary License. It is NOT Open Source!
  */
 class BemTest
 {
     /**
-     * run() - запускает тесты данного класса
+     * Run tests of the current class
      *
-     * @version v3.0.0 2020-07-07 18:01:09
+     * @version v3.0.1 2020-09-09 16:14:16
      * @return void
      */
     public static function run(): void
@@ -34,10 +33,10 @@ class BemTest
     }
 
     /**
-     * linkTest() - тест для метода link
+     * link method test
      *
-     * @version v3.0.0 2020-07-07 18:01:21
-     * @return string - html тег с сообщением результата прохождения теста
+     * @version v3.0.1 2020-09-09 16:14:16
+     * @return string - html tag with the message of the test result
      */
     public static function linkTest(): string
     {
@@ -47,7 +46,7 @@ class BemTest
 
 
         // Arrange Test
-        $UTest->nextHint = 'Без дополнительных аттрибутов';
+        $UTest->nextHint = 'Without additional attributes';
         $expect = '<a href="#">hello</a>';
         // Act
         $act = $Bem->link('', '#', 'hello');
@@ -56,7 +55,7 @@ class BemTest
 
 
         // Arrange Test
-        $UTest->nextHint = 'с атрибутами id и class';
+        $UTest->nextHint = 'With id and class attributes';
         $expect = '<a id="hi" class="there" href="/test/">hello</a>';
         // Act
         $act = $Bem->link('#hi.there', '/test/', 'hello');
@@ -68,10 +67,10 @@ class BemTest
     }
 
     /**
-     * hiddenTest() - тест для метода hidden
+     * hidden method test
      *
-     * @version v3.0.0 2020-07-07 18:02:12
-     * @return string - html тег с сообщением результата прохождения теста
+     * @version v3.0.1 2020-09-09 16:14:16
+     * @return string - html tag with the message of the test result
      */
     public static function hiddenTest(): string
     {
@@ -81,7 +80,7 @@ class BemTest
 
 
         // Arrange Test
-        $UTest->nextHint = 'Без дополнительных аттрибутов';
+        $UTest->nextHint = 'Without additional attributes';
         $expect = '<input type="hidden" name="myname" value="myval">';
         // Act
         $act = $Bem->hidden('', 'myname', 'myval');
@@ -90,7 +89,7 @@ class BemTest
 
 
         // Arrange Test
-        $UTest->nextHint = 'с аттрибутами id и class';
+        $UTest->nextHint = 'With id and class attributes';
         $expect = '<input id="hi" class="there" type="hidden" name="myname" value="myval">';
         // Act
         $act = $Bem->hidden('#hi.there', 'myname', 'myval');
@@ -102,10 +101,10 @@ class BemTest
     }
 
     /**
-     * selectTest() - тест для метода select
+     * select method test
      *
-     * @version v3.0.0 2020-07-07 18:02:12
-     * @return string - html тег с сообщением результата прохождения теста
+     * @version v3.0.1 2020-09-09 16:14:16
+     * @return string - html tag with the message of the test result
      */
     public static function selectTest(): string
     {
@@ -122,9 +121,9 @@ class BemTest
 
 
         // Arrange Test
-        $UTest->nextHint = 'Select без дополнительных аттрибутов';
+        $UTest->nextHint = 'Select without additional attributes';
         $expect = '<select name="myname">';
-        $expect .= '<option value="null">--выберите--</option>';
+        $expect .= '<option value="null">--choose--</option>';
         $expect .= '<option value="1">option1</option>';
         $expect .= '<option value="2">option2</option>';
         $expect .= '<option value="3">option3</option>';
@@ -136,9 +135,9 @@ class BemTest
 
 
         // Arrange Test
-        $UTest->nextHint = 'Select с аттрибутами id, class и с уже выбранным значением';
+        $UTest->nextHint = 'Select with attributes id and class with preselected value';
         $expect = '<select id="hi" class="there" name="myname">';
-        $expect .= '<option value="null">--выберите--</option>';
+        $expect .= '<option value="null">--choose--</option>';
         $expect .= '<option value="1">option1</option>';
         $expect .= '<option value="2">option2</option>';
         $expect .= '<option value="3" selected>option3</option>';
@@ -153,10 +152,10 @@ class BemTest
     }
 
     /**
-     * tagTest() - тест для метода tag
+     * tag method test
      *
-     * @version v3.0.0 2020-07-07 18:02:12
-     * @return string - html тег с сообщением результата прохождения теста
+     * @version v3.0.1 2020-09-09 16:14:16
+     * @return string - html tag with the message of the test result
      */
     public static function tagTest(): string
     {
@@ -188,7 +187,7 @@ class BemTest
 
 
         // Arrange Test
-        $UTest->nextHint = 'Аттрибут тега без значения';
+        $UTest->nextHint = 'Tag attribute with no value';
         $expect = '<input type="text" name="name" disabled>';
         // Act
         $act = $Bem->tag('input[type=text][name=name][disabled]', null);
@@ -197,7 +196,7 @@ class BemTest
 
 
         // Arrange Test
-        $UTest->nextHint = 'Наличие символов # и . в атрибутах не должно создавать лишних аттрибутов';
+        $UTest->nextHint = 'The presence of symbols # and . in attributes should not create unnecessary attributes';
         $expect = '<li test="#...hi#there#.#"></li>';
         // Act
         $act = $Bem->tag('li[test=#...hi#there#.#]');
@@ -209,10 +208,10 @@ class BemTest
     }
 
     /**
-     * closeTagTest() - тест для метода closeTag
+     * closeTag method test
      *
-     * @version v3.0.0 2020-07-07 18:02:12
-     * @return string - html тег с сообщением результата прохождения теста
+     * @version v3.0.1 2020-09-09 16:14:16
+     * @return string - html tag with the message of the test result
      */
     public static function closeTagTest(): string
     {
@@ -222,7 +221,7 @@ class BemTest
 
 
         // Arrange Test
-        $UTest->nextHint = 'Без аттрибутов = < /div>';
+        $UTest->nextHint = 'Without attributes = < /div>';
         $expect = '</div>';
         // Act
         $act = $Bem->closeTag();
@@ -231,7 +230,7 @@ class BemTest
 
 
         // Arrange Test
-        $UTest->nextHint = 'Закрывающий span';
+        $UTest->nextHint = 'Closing span';
         $expect = '</span>';
         // Act
         $act = $Bem->closeTag('span');
