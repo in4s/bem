@@ -6,15 +6,16 @@ namespace in4s;
 /**
  * Class BemTest - Тесты для класса Bem
  *
- * @package     in4s\Bem
- * @author      Eugeniy Makarkin <solascriptura@mail.ru>
  * @version     v2.0.0 2019-09-15 08:06:20
+ * @author      Eugeniy Makarkin <solascriptura@mail.ru>
+ * @package     in4s\Bem
  * @copyright   Copyright (c) 2018, by J4. Proprietary License. It is NOT Open Source!
  */
 class BemTest
 {
     /**
      * run() - запускает тесты данного класса
+     *
      * @version v2.0.0 2019-09-15 08:08:35
      * @return Null
      */
@@ -32,13 +33,14 @@ class BemTest
 
     /**
      * linkTest() - тест для метода link
+     *
      * @version v2.0.0 2019-09-15 08:08:35
      * @return string - html тег с сообщением результата прохождения теста
      */
     public static function linkTest()
     {
         global $Bem, $UTest;
-        
+
         $UTest->methodName = 'link';
 
 
@@ -65,6 +67,7 @@ class BemTest
 
     /**
      * hiddenTest() - тест для метода hidden
+     *
      * @version v2.0.0 2019-09-15 08:08:35
      * @return string - html тег с сообщением результата прохождения теста
      */
@@ -98,44 +101,45 @@ class BemTest
 
     /**
      * selectTest() - тест для метода select
+     *
      * @version v2.0.0 2019-09-15 08:08:35
      * @return string - html тег с сообщением результата прохождения теста
      */
     public static function selectTest()
     {
         global $Bem, $UTest;
-        
+
         $UTest->methodName = 'select';
 
         // Arrange Tests
-        $optionsArray = array(
-            array('id' => 1, 'name' => 'option1'),
-            array('id' => 2, 'name' => 'option2'),
-            array('id' => 3, 'name' => 'option3')
-        );
+        $optionsArray = [
+            ['id' => 1, 'name' => 'option1'],
+            ['id' => 2, 'name' => 'option2'],
+            ['id' => 3, 'name' => 'option3'],
+        ];
 
 
         // Arrange Test
         $UTest->nextHint = 'Select без дополнительных аттрибутов';
-        $expect =  '<select name="myname">';
-        $expect .=     '<option value="null">--выберите--</option>';
-        $expect .=     '<option value="1">option1</option>';
-        $expect .=     '<option value="2">option2</option>';
-        $expect .=     '<option value="3">option3</option>';
+        $expect = '<select name="myname">';
+        $expect .= '<option value="null">--выберите--</option>';
+        $expect .= '<option value="1">option1</option>';
+        $expect .= '<option value="2">option2</option>';
+        $expect .= '<option value="3">option3</option>';
         $expect .= '</select>';
         // Act
         $act = $Bem->select('', 'myname', $optionsArray);
         // Assert Test
         $UTest->isEqual("select('', 'myname', array);", $expect, $act);
-      
+
 
         // Arrange Test
         $UTest->nextHint = 'Select с аттрибутами id, class и с уже выбранным значением';
-        $expect =  '<select id="hi" class="there" name="myname">';
-        $expect .=     '<option value="null">--выберите--</option>';
-        $expect .=     '<option value="1">option1</option>';
-        $expect .=     '<option value="2">option2</option>';
-        $expect .=     '<option value="3" selected>option3</option>';
+        $expect = '<select id="hi" class="there" name="myname">';
+        $expect .= '<option value="null">--выберите--</option>';
+        $expect .= '<option value="1">option1</option>';
+        $expect .= '<option value="2">option2</option>';
+        $expect .= '<option value="3" selected>option3</option>';
         $expect .= '</select>';
         // Act
         $act = $Bem->select('#hi.there', 'myname', $optionsArray, 3);
@@ -148,13 +152,14 @@ class BemTest
 
     /**
      * tagTest() - тест для метода tag
+     *
      * @version v2.0.0 2019-09-15 08:08:35
      * @return string - html тег с сообщением результата прохождения теста
      */
     public static function tagTest()
     {
         global $Bem, $UTest;
-        
+
         $UTest->methodName = 'tag';
 
 
@@ -196,23 +201,24 @@ class BemTest
         $act = $Bem->tag('li[test=#...hi#there#.#]');
         // Assert Test
         $UTest->isEqual("tag('li[test=#...hi#there#.#]');", $expect, $act);
-        
+
 
         return $UTest->functionResults;
     }
 
     /**
      * closeTagTest() - тест для метода closeTag
+     *
      * @version v2.0.0 2019-09-15 08:08:35
      * @return string - html тег с сообщением результата прохождения теста
      */
     public static function closeTagTest()
     {
         global $Bem, $UTest;
-            
+
         $UTest->methodName = 'closeTag';
-    
-    
+
+
         // Arrange Test
         $UTest->nextHint = 'Без аттрибутов = < /div>';
         $expect = '</div>';
@@ -229,7 +235,7 @@ class BemTest
         $act = $Bem->closeTag('span');
         // Assert Test
         $UTest->isEqual("closeTag('span');", $expect, $act);
-        
+
 
         return $UTest->functionResults;
     }

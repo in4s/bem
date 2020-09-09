@@ -21,7 +21,10 @@
     },
     "autoload": {
         "psr-4": {
-          "in4s\\": ["src/", "tests/"]
+            "in4s\\": [
+                "src/",
+                "tests/"
+            ]
         },
         "files": []
     }
