@@ -9,7 +9,7 @@ namespace in4s;
  * Class BemTest - Tests for class Bem
  *
  * @version     v4.0.1 2020-09-09 16:14:07
- * @author      Eugeniy Makarkin <soloscriptura@mail.ru>
+ * @author      Eugeniy Makarkin
  * @package     in4s\Bem
  */
 class BemTest

@@ -9,7 +9,7 @@ namespace in4s;
  * Generation of HTML tags, with classes according to BEM
  *
  * @version     v5.0.1 2020-09-09 16:12:56
- * @author      Eugeniy Makarkin <soloscriptura@mail.ru>
+ * @author      Eugeniy Makarkin
  * @package     in4s\Bem
  */
 class Bem
