@@ -8,7 +8,7 @@ namespace in4s;
 /**
  * Class BemTest - Tests for class Bem
  *
- * @version     v4.0.0 2020-07-15 22:06:59
+ * @version     v4.0.1 2020-09-09 16:14:07
  * @author      Eugeniy Makarkin <solascriptura@mail.ru>
  * @package     in4s\Bem
  * @copyright   Copyright (c) 2008-2020, by J4. Proprietary License. It is NOT Open Source!
@@ -18,7 +18,7 @@ class BemTest
     /**
      * Run tests of the current class
      *
-     * @version v3.0.0 2020-07-07 18:01:09
+     * @version v3.0.1 2020-09-09 16:14:16
      * @return void
      */
     public static function run(): void
@@ -36,7 +36,7 @@ class BemTest
     /**
      * link method test
      *
-     * @version v3.0.0 2020-07-07 18:01:21
+     * @version v3.0.1 2020-09-09 16:14:16
      * @return string - html tag with the message of the test result
      */
     public static function linkTest(): string
@@ -70,7 +70,7 @@ class BemTest
     /**
      * hidden method test
      *
-     * @version v3.0.0 2020-07-07 18:02:12
+     * @version v3.0.1 2020-09-09 16:14:16
      * @return string - html tag with the message of the test result
      */
     public static function hiddenTest(): string
@@ -104,7 +104,7 @@ class BemTest
     /**
      * select method test
      *
-     * @version v3.0.0 2020-07-07 18:02:12
+     * @version v3.0.1 2020-09-09 16:14:16
      * @return string - html tag with the message of the test result
      */
     public static function selectTest(): string
@@ -155,7 +155,7 @@ class BemTest
     /**
      * tag method test
      *
-     * @version v3.0.0 2020-07-07 18:02:12
+     * @version v3.0.1 2020-09-09 16:14:16
      * @return string - html tag with the message of the test result
      */
     public static function tagTest(): string
@@ -211,7 +211,7 @@ class BemTest
     /**
      * closeTag method test
      *
-     * @version v3.0.0 2020-07-07 18:02:12
+     * @version v3.0.1 2020-09-09 16:14:16
      * @return string - html tag with the message of the test result
      */
     public static function closeTagTest(): string

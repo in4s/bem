@@ -8,7 +8,7 @@ namespace in4s;
 /**
  * Generation of HTML tags, with classes according to BEM
  *
- * @version     v5.0.0 2020-07-15 20:45:00
+ * @version     v5.0.1 2020-09-09 16:12:56
  * @author      Eugeniy Makarkin <solascriptura@mail.ru>
  * @package     in4s\Bem
  * @copyright   Copyright (c) 2008 - 2020, by J4. Proprietary License. It is NOT Open Source!
@@ -19,7 +19,7 @@ class Bem
     /**
      * Generate html tag <a>
      *
-     * @version v3.0.0 2020-07-07 18:03:27
+     * @version v3.0.1 2020-09-09 16:13:01
      *
      * @param string $selector - Selector
      * @param string $href     - Link
@@ -35,7 +35,7 @@ class Bem
     /**
      * Generate html tag
      *
-     * @version v4.0.0 2020-07-15 20:43:24
+     * @version v4.0.1 2020-07-15 20:43:24
      *
      * @param string      $selector - Selector
      * @param string|null $content  - Tag content
@@ -111,7 +111,7 @@ class Bem
     /**
      * Generate html tag <input type="hidden" ...>
      *
-     * @version v2.0.3 2020-07-07 11:18:12
+     * @version v2.0.4 2020-07-07 11:18:12
      *
      * @param string $selector - Selector
      * @param string $name     - Name (The value of the Name attribute)
@@ -127,7 +127,7 @@ class Bem
     /**
      * Generate html tag <select>
      *
-     * @version v4.0.0 2020-07-15 20:44:48
+     * @version v4.0.1 2020-07-15 20:44:48
      *
      * @param string      $selector - Selector
      * @param string      $name     - Name (The value of the Name attribute)
@@ -148,7 +148,7 @@ class Bem
     /**
      * Generate the closing html tag
      *
-     * @version v3.0.0 2020-07-07 18:03:27
+     * @version v3.0.1 2020-09-09 16:13:01
      *
      * @param string $tagName - Tag name
      *
