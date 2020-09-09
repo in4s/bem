@@ -7,9 +7,8 @@ namespace in4s;
  * Class BemTest - Tests for class Bem
  *
  * @version     v2.0.0 2019-09-15 08:06:20
- * @author      Eugeniy Makarkin <solascriptura@mail.ru>
+ * @author      Eugeniy Makarkin
  * @package     in4s\Bem
- * @copyright   Copyright (c) 2018, by J4. Proprietary License. It is NOT Open Source!
  */
 class BemTest
 {

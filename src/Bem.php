@@ -9,9 +9,8 @@ namespace in4s;
  * Generation of HTML tags, with classes according to BEM
  *
  * @version     v3.0.1 2020-09-09 15:48:15
- * @author      Eugeniy Makarkin <solascriptura@mail.ru>
+ * @author      Eugeniy Makarkin
  * @package     in4s\Bem
- * @copyright   Copyright (c) 2018, by J4. Proprietary License. It is NOT Open Source!
  */
 class Bem
 {
