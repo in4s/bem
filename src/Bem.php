@@ -138,7 +138,7 @@ class Bem
      */
     public function select(string $selector, string $name, array $options, $selected = null): string
     {
-        $optionsHtml = $this->tag('option[value=null]', '--выберите--');
+        $optionsHtml = $this->tag('option[value=null]', '--choose--');
         foreach ($options as $option) {
             $optionsHtml .= $this->tag('option[value=' . $option['id'] . ']' . ($option['id'] == $selected ? '[selected]' : ''), $option['name']);
         }
