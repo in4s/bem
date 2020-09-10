@@ -5,15 +5,14 @@
     "version": "4.0.0-alpha.2",
     "keywords": [
         "bem",
-        "html"
+        "html",
+        "php"
     ],
     "homepage": "https://github.com/in4s/bem/",
-    "license": "proprietary",
+    "license": "MIT",
     "authors": [
         {
-            "name": "Evgeniy Makarkin",
-            "email": "solascriptura@mail.ru",
-            "role": "lead"
+            "name": "Eugeniy Makarkin"
         }
     ],
     "require": {
