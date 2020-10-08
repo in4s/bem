@@ -35,7 +35,6 @@ class BemTest
     /**
      * link method test
      *
-     * @version v2.0.0 2019-09-15 08:08:35
      * @return string - html tag with the message of the test result
      */
     public static function linkTest()
@@ -69,7 +68,6 @@ class BemTest
     /**
      * hidden method test
      *
-     * @version v2.0.0 2019-09-15 08:08:35
      * @return string - html tag with the message of the test result
      */
     public static function hiddenTest()
@@ -103,7 +101,6 @@ class BemTest
     /**
      * select method test
      *
-     * @version v2.0.0 2019-09-15 08:08:35
      * @return string - html tag with the message of the test result
      */
     public static function selectTest()
@@ -154,7 +151,6 @@ class BemTest
     /**
      * tag method test
      *
-     * @version v2.0.0 2019-09-15 08:08:35
      * @return string - html tag with the message of the test result
      */
     public static function tagTest()
@@ -210,7 +206,6 @@ class BemTest
     /**
      * closeTag method test
      *
-     * @version v2.0.0 2019-09-15 08:08:35
      * @return string - html tag with the message of the test result
      */
     public static function closeTagTest()
