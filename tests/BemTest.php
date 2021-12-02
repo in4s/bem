@@ -8,7 +8,7 @@ namespace in4s;
 /**
  * Class BemTest - Tests for class Bem
  *
- * @version     v4.0.1 2020-09-09 16:14:07
+ * @version     v4.1.0 2021-12-02 06:20:48
  * @author      Eugeniy Makarkin
  * @package     in4s\Bem
  */
@@ -17,13 +17,13 @@ class BemTest
     /**
      * Run tests of the current class
      *
-     * @version v3.0.1 2020-09-09 16:14:16
+     * @version v3.2.0 2021-12-02 06:19:41
      * @return void
      */
     public static function run(): void
     {
         echo '<div class="utest__section">';
-        echo '<h5>Bem:</h5>';
+        echo '<h5 class="utest__module-name">Bem:</h5>';
         echo self::linkTest();
         echo self::hiddenTest();
         echo self::selectTest();
@@ -176,7 +176,7 @@ class BemTest
         $UTest->isEqual("tag('h1.hi.there');", '<h1 class="hi there"></h1>', $Bem->tag('h1.hi.there'));
         $UTest->isEqual("tag('h1.hi.there.hi');", '<h1 class="hi there"></h1>', $Bem->tag('h1.hi.there.hi'));
         $UTest->isEqual("tag('h1.hi.there#there');", '<h1 id="there" class="hi there"></h1>', $Bem->tag('h1.hi.there#there'));
-        $UTest->isEqual("tag('h1.hi#there.there#second_id', 'текст');", '<h1 id="there" class="hi there">текст</h1>', $Bem->tag('h1.hi#there.there#second_id', 'текст'));
+        $UTest->isEqual("tag('h1.hi#there.there#second_id', 'text');", '<h1 id="there" class="hi there">text</h1>', $Bem->tag('h1.hi#there.there#second_id', 'text'));
         $UTest->isEqual("tag('h1.hi[data-j4=\"hello\"]');", '<h1 class="hi" data-j4="hello"></h1>', $Bem->tag('h1.hi[data-j4="hello"]'));
         $UTest->isEqual("tag('h1.hi[data-j4=hello]');", '<h1 class="hi" data-j4="hello"></h1>', $Bem->tag('h1.hi[data-j4=hello]'));
         $UTest->isEqual("tag('h1.hi[data-j4=\"hello\"][title='hi']');", '<h1 class="hi" data-j4="hello" title="hi"></h1>', $Bem->tag('h1.hi[data-j4="hello"][title=\'hi\']'));
