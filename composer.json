@@ -2,7 +2,7 @@
     "name": "in4s/bem",
     "description": "Bem Class",
     "type": "library",
-    "version": "4.0.0-alpha.2",
+    "version": "4.0.0",
     "keywords": [
         "bem",
         "html",
